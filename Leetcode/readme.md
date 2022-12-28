@@ -48,3 +48,23 @@ It contains the solved Leetcode problems for SQL using Microsoft SQL Server.
     GO
    ```
     
+## Statements
+1. ### **CASE**:
+   Evaluates a list of conditions and returns one of multiple possible result expressions.
+
+   *Example*
+
+   ```SQL
+    SELECT   ProductNumber, Category =  
+        CASE ProductLine  
+            WHEN 'R' THEN 'Road'  
+            WHEN 'M' THEN 'Mountain'  
+            WHEN 'T' THEN 'Touring'  
+            WHEN 'S' THEN 'Other sale items'  
+            ELSE 'Not for sale'  
+        END,  
+    Name  
+    FROM Production.Product  
+    ORDER BY ProductNumber;  
+    GO
+   ```
